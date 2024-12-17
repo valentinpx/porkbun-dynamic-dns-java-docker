@@ -25,9 +25,16 @@ git clone https://github.com/valentinpx/porkbun-dynamic-dns-java-docker.git
 cd porkbun-dynamic-dns-java-docker
 ```
 
-### Build the Docker image
+### Docker image
+#### Build
 ```sh
 docker build -t porkbun-ddns .
+```
+
+#### Docker registry
+You can also pull the image from the Docker registry:
+```sh
+docker pull valentinpx/porkbun-ddns
 ```
 
 ### Run the Docker container
