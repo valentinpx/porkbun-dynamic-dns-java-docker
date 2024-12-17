@@ -10,4 +10,4 @@ make jar
 echo "---" && pwd && ls && cat config.json && echo "---"
 
 # Run the jar file
-java -jar porkbun-ddns.jar ${DOMAIN} ${SUB_DOMAIN} A
+java -jar porkbun-ddns.jar ${DOMAIN} ${SUBDOMAIN} A
