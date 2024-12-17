@@ -7,25 +7,30 @@ This project provides a Dockerized Java application to update DNS records on Por
 - A Porkbun record to update 🤡
 
 ## Configuration
+### Required environment variables
 Set the following environment variables in a `.env` file (you can also pass them as arguments to the `docker run` command):
 - `DOMAIN`: The Porkbun domain name you want to update.
 - `SUBDOMAIN`: The Porkbun subdomain you want to update.
 - `API_KEY`: Your Porkbun API Key.
 - `SECRET_API_KEY`: Your Porkbun API Secret.
 
-## Getting Started
-### Clone the Repository
+### CRON schedule
+By default, the application runs only once. To run it periodically, specify a CRON schedule in the `CRON_SCHEDULE` environment variable. For example, to run the application every 5 minutes:
+- `CRON_SCHEDULE=*/5 * * * *`
+
+## Getting started
+### Clone the repository
 ```sh
 git clone https://github.com/valentinpx/porkbun-dynamic-dns-java-docker.git
 cd porkbun-dynamic-dns-java-docker
 ```
 
-### Build the Docker Image
+### Build the Docker image
 ```sh
 docker build -t porkbun-ddns .
 ```
 
-### Run the Docker Container
+### Run the Docker container
 ```sh
 docker run --env-file .env porkbun-ddns
 ```
