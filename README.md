@@ -19,20 +19,20 @@ By default, the application runs only once. To run it periodically, specify a CR
 - `CRON_SCHEDULE=*/5 * * * *`
 
 ## Getting started
-### Clone the repository
+### Build image from repository
+#### Clone the repository
 ```sh
 git clone https://github.com/valentinpx/porkbun-dynamic-dns-java-docker.git
 cd porkbun-dynamic-dns-java-docker
 ```
 
-### Docker image
-#### Build
+#### Build Docker image
 ```sh
 docker build -t porkbun-ddns .
 ```
 
-#### Docker registry
-You can also pull the image from the Docker registry:
+### Docker registry
+You can also directly pull the image from the Docker registry:
 ```sh
 docker pull valentinpx/porkbun-ddns
 ```
