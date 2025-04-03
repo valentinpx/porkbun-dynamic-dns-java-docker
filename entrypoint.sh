@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create config file
-echo "{\"endpoint\":\"https://porkbun.com/api/json/v3\",\"secretapikey\":\"${SECRET_API_KEY}\",\"apikey\":\"${API_KEY}\"}" > config.json
+echo "{\"endpoint\":\"https://api.porkbun.com/api/json/v3\",\"secretapikey\":\"${SECRET_API_KEY}\",\"apikey\":\"${API_KEY}\"}" > config.json
 
 # Build the jar file
 make
